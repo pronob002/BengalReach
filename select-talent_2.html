@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Talent</title>
+    <link rel="stylesheet" href="select-talent_2.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1><span>Shout</span>Cart</h1>
+            <p>Find the best influencers selected from the crowd</p>
+            <div class="image-container">
+                <img src="influencer.png" alt="Influencer">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="talent-container">
+                <h2>Select your talent</h2>
+                <p class="talent-subtext">Ex: Dancing, Makeup artist, Sketching, Travel etc.</p>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search talents..." oninput="filterTalents()">
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+
+                <!-- Selected Tags -->
+                <p class="keywords-limit">Up to 15 Keywords</p>
+                <div id="selected-tags" class="selected-tags"></div>
+
+                <!-- Search Results -->
+                <div class="search-results" id="search-results"></div>
+
+                <!-- Proceed Button -->
+                <button class="proceed-btn" onclick="submitTalents()">Proceed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="select-talent_2.js"></script>
+</body>
+</html>

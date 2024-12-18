@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Collapsible Sidebar with Top Bar</title>
+        <!-- Font Awesome Icon Library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="Dashboard_2.css">
+    </head>
+    
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <!-- Logo -->
+            <div class="logo">
+                <h2>Bengal<span class="highlight">Reach</span></h2>
+            </div>
+
+            <!-- Toggle Button -->
+            <div class="toggle-btn" id="toggleBtn">
+                <span>&#x276E;</span>
+            </div>
+
+            <!-- Navigation -->
+            <ul>
+                <li onclick="showSection('dashboard')">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="text">Dashboard</span>
+                </li>
+                <li onclick="showSection('findInfluencers')">
+                    <span class="icon"><i class="fas fa-search"></i></span>
+                    <span class="text">Find Influencers</span>
+                </li>
+                <li onclick="showSection('list')">
+                    <span class="icon"><i class="fas fa-users"></i></span>
+                    <span class="text">List</span>
+                </li>
+                <li class="active" onclick="showSection('orders')">
+                    <span class="icon"><i class="fas fa-calendar-alt"></i></span>
+                    <span class="text">Orders</span>
+                </li>
+                <li onclick="showSection('campaigns')">
+                    <span class="icon"><i class="fas fa-folder-open"></i></span>
+                    <span class="text">Campaigns</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search..." />
+                </div>
+
+                <!-- Action Icons -->
+                <div class="actions">
+                    <!-- Theme Toggle -->
+                    <div class="theme-switcher">
+                        <button id="lightMode" class="active">
+                            <i class="fa-regular fa-sun"></i>
+                        </button>
+                        <button id="darkMode">
+                            <i class="fa-regular fa-moon"></i>
+                        </button>
+                    </div>
+                
+                    <!-- Notification Icon -->
+                    <div class="icon"><i class="fa-solid fa-bell"></i></div>
+                
+                    <!-- Message Icon (Replaces Settings Icon) -->
+                    <div class="icon"><i class="fa-regular fa-comment-dots"></i></div>
+                
+                    <!-- Profile -->
+                    <div class="profile">
+                        <img src="profile.jpg" alt="Profile" />
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <div id="dashboard" class="section">Welcome to the Dashboard!</div>
+                <div id="findInfluencers" class="section" style="display: none;">Find Influencers Content</div>
+                <div id="list" class="section" style="display: none;">List Content</div>
+                <div id="orders" class="section" style="display: block;">
+                    <h2>Orders</h2>
+                    <p>This is the Orders section.</p>
+                </div>
+                <div id="campaigns" class="section" style="display: none;">Campaigns Content</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Dashboard_2.js"></script>
+</body>
+</html>

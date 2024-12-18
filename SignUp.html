@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengalreach - Sign Up</title>
+    <link rel="stylesheet" href="SignUp.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1><span>Bengal</span>reach</h1>
+            <p>Find the best influencers selected from the crowd</p>
+            <div class="image-container">
+                <img src="influencer.png" alt="Influencer">
+                
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Sign up as creator</h2>
+
+            <form id="signup-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <span class="toggle-link" onclick="toggleInput()">Sign up with phone number</span>
+                    <input type="email" id="email" placeholder="Enter your mail here" required>
+                </div>
+
+                <div class="form-group" id="phone-group" style="display: none;">
+                    <label>Phone Number</label>
+                    <span class="toggle-link" onclick="toggleInput()">Sign up with email</span>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter you mail here" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirm password</label>
+                    <input type="password" id="confirm-password" placeholder="Repeat your password" required>
+                </div>
+
+                <button type="submit" class="signup-btn">Sign up</button>
+            </form>
+
+            <p class="signin-text">
+                Already have an account? <a href="#">Sign in</a>
+            </p>
+        </div>
+    </div>
+    <script src="SignUp.js"></script>
+</body>
+</html>

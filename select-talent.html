@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Talent</title>
+    <link rel="stylesheet" href="select-talent.css">
+    <!-- FontAwesome for Search Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1><span>Shout</span>Cart</h1>
+            <p>Find the best influencers selected from the crowd</p>
+            <div class="image-container">
+                <img src="influencer.png" alt="Influencer Image">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="talent-container">
+                <h2>Select your talent</h2>
+                <p class="talent-subtext">Ex: Dancing, Makeup artist, Sketching, Travel etc.</p>
+
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="talent-search" placeholder="Search talents..." onkeyup="filterResults()" />
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </div>
+
+                <!-- Search Results -->
+                <div class="search-results" id="search-results">
+                    <span class="result-tag">Artist <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Makeup Artist <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Canvas Art <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Game Art <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Illustration <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Digital Art <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Digital Art <i class="fas fa-plus"></i></span>
+                    <span class="result-tag">Art Therapy <i class="fas fa-plus"></i></span>
+                </div>
+
+                <!-- Proceed Button -->
+                <button class="proceed-btn">Proceed</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="select-talent.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Influencer ID</title>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="setup-influencer.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1><span>Shout</span>Cart</h1>
+            <p>Find the best influencers selected from the crowd</p>
+            <div class="image-container">
+                <img src="influencer.png" alt="Influencer">
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="setup-container">
+                <h2>Setup your Influencer ID</h2>
+                <p class="choose-platform">Choose platform</p>
+
+                <!-- Platform Buttons -->
+                <div class="platform-icons">
+                    <button class="platform-btn active" id="instagram" onclick="selectPlatform(this)">
+                        <i class="fab fa-instagram"></i>
+                    </button>
+                    <button class="platform-btn" id="tiktok" onclick="selectPlatform(this)">
+                        <i class="fab fa-tiktok"></i>
+                    </button>
+                    <button class="platform-btn" id="facebook" onclick="selectPlatform(this)">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button class="platform-btn" id="twitter" onclick="selectPlatform(this)">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                </div>
+
+                <!-- Handle Input -->
+                <div class="form-group">
+                    <label for="handle">Enter your handle</label>
+                    <input type="text" id="handle" placeholder="ex: abdunnur156" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button class="submit-btn">Get a code</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="setup-influencer.js"></script>
+</body>
+</html>

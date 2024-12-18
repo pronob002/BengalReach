@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Sidebar Section -->
+    <div class="sidebar">
+        <h1 class="brand">BengalReach</h1>
+        <ul class="menu">
+            <li onclick="showPage('dashboard')" class="active"><i class="fas fa-home"></i> Dashboard</li>
+            <li onclick="showPage('find-influencers')"><i class="fas fa-users"></i> Find Influencers</li>
+            <li onclick="showPage('list')"><i class="fas fa-list"></i> List</li>
+            <li onclick="showPage('orders')"><i class="fas fa-box"></i> Orders</li>
+            <li onclick="showPage('campaigns')"><i class="fas fa-briefcase"></i> Campaigns</li>
+        </ul>
+        <div class="slider-btn" onclick="toggleSidebar()">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Page: Dashboard -->
+        <div id="dashboard" class="page active">
+            <h2>Welcome to the Dashboard</h2>
+            <p>Overview of statistics and highlights.</p>
+        </div>
+
+        <!-- Page: Find Influencers -->
+        <div id="find-influencers" class="page">
+            <h2>Find Influencers</h2>
+            <p>Search and connect with influencers.</p>
+        </div>
+
+        <!-- Page: List -->
+        <div id="list" class="page">
+            <h2>List</h2>
+            <p>Manage your influencer list.</p>
+        </div>
+
+        <!-- Page: Orders -->
+        <div id="orders" class="page">
+            <h2>Orders</h2>
+            <div class="order-card">
+                <h3>Nike Shoe Campaign</h3>
+                <p>@abdunnur 156 | Delivery: 12th July</p>
+                <span class="status waiting">Waiting to get started</span>
+                <span class="price">$15</span>
+                <button class="manage-btn">Manage Order</button>
+            </div>
+            <div class="order-card">
+                <h3>Post for Polo T-shirt</h3>
+                <p>@abdunnur 156 | Delivered at: 12th July</p>
+                <span class="status completed">Completed</span>
+                <span class="price">$15</span>
+                <button class="manage-btn">Manage Order</button>
+            </div>
+        </div>
+
+        <!-- Page: Campaigns -->
+        <div id="campaigns" class="page">
+            <h2>Campaigns</h2>
+            <p>Manage and create campaigns.</p>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
