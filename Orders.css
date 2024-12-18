@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+}
+
+.orders-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.order-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.waiting {
+    background-color: #f2e1ff;
+    color: #9b59b6;
+}
+
+.completed {
+    background-color: #ffebeb;
+    color: #e74c3c;
+}
+
+.order-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+.manage-btn {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.manage-btn:hover {
+    border-color: #6a1b9a;
+    color: #6a1b9a;
+}
