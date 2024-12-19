@@ -1,0 +1,58 @@
+<!-- submit_order -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Modal Example</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="submit_order.css">
+</head>
+<body>
+
+<button id="openModalBtn">Complete & Submit Order</button>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <h2>Complete & Submit Order</h2>
+      <button class="close-btn" id="closeModalBtn">✕</button>
+    </div>
+    <div class="modal-content">
+      <label for="orderNotes" class="section-label">Short notes about the order</label>
+      <textarea id="orderNotes" class="notes-textarea" placeholder="Send notes..."></textarea>
+
+      <label class="section-label">Upload documents</label>
+      <div class="upload-area" id="uploadArea">
+        <div class="upload-instructions">
+          <div class="upload-icon">⇪</div>
+          <p>Upload necessary document</p>
+        </div>
+      </div>
+
+      <div class="attachments-list" id="attachmentsList">
+        <!-- Dummy attachments -->
+        <div class="attachment-item">
+          <div class="radio-circle"></div>
+          <span class="attachment-name">Attachment 1</span>
+          <button class="remove-attachment">✕</button>
+        </div>
+        <div class="attachment-item">
+          <div class="radio-circle"></div>
+          <span class="attachment-name">Attachment 1</span>
+          <button class="remove-attachment">✕</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="submit-btn" id="submitBtn">Fill up the info and ready!</button>
+    </div>
+  </div>
+</div>
+
+<script src="submit_order.js"></script>
+</body>
+</html>

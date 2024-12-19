@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Transactions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Transaction.css">
+</head>
+<body>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="#">Profile</a> / <span>Transactions</span>
+  </nav>
+
+  <h1 class="page-title">Transactions</h1>
+
+  <div class="card">
+    <div class="card-header transaction-header">
+      <h2>Withdraw history</h2>
+      <div class="filter-dropdown">
+        <button class="filter-btn">No filter applied ▼</button>
+      </div>
+    </div>
+
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Date and time</th>
+          <th>Payment method</th>
+          <th>Account</th>
+          <th>Order</th>
+          <th>Amount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="transactions-body">
+        <!-- Rows populated by script.js -->
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<script src="Transaction.js"></script>
+</body>
+</html>

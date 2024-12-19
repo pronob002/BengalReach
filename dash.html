@@ -1,0 +1,60 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <div class="overview-wrapper">
+        <h1>Dashboard</h1>
+
+        <div class="overview-layout">
+            <div class="info-box">
+                <h2 class="H2">Balance</h2>
+                <p class="total-balance">$125.00</p>
+                <button class="action-button">Withdraw</button>
+            </div>
+
+            <div class="info-box">
+                <h2 class="H2">Messages</h2>
+                <p class="unread-messages"><span>2</span> unread messages</p>
+                <div class="message-icon">
+                    <img src="notification-icon.png" alt="Messages">
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h2 class="H2">Accounts</h2>
+                <p class="account-count">3</p>
+                <button class="action-button">Manage</button>
+            </div>
+
+            <div class="info-box double">
+                <div class="orders-header">
+                    <h2 class="H2">Orders</h2>
+                    <button class="action-button small">See orders</button>
+                </div>
+                <div class="order-summary">
+                    <span>Completed order: <strong>12</strong></span>
+                    <span>Ongoing order: <strong>5</strong></span>
+                    <span>Pending: <strong>1</strong></span>
+                </div>
+            </div>
+
+            <div class="info-box double">
+                <div class="earnings-header">
+                    <h2 class="H2">Total Earning till date</h2>
+                    <button class="action-button small">See Earnings</button>
+                </div>
+                <div class="earnings-details">
+                    <span>Income: <strong>$358.00</strong></span>
+                    <span>Withdrawn: <strong>$340.00</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

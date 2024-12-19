@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Account Settings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="account_setting.css">
+</head>
+<body>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="#">Profile</a> / <span>Account Settings</span>
+  </nav>
+
+  <h1 class="page-title">Account Settings</h1>
+
+  <!-- Login Details Card -->
+  <div class="card login-details">
+    <div class="card-header">
+      <h2>Login Details</h2>
+      <button class="edit-btn">✎ Edit details</button>
+    </div>
+    <div class="card-content login-grid">
+      <div class="login-item">
+        <span class="label">Full Name</span>
+        <span class="value" id="fullName">Abdun Nur Wasit</span>
+      </div>
+      <div class="login-item">
+        <span class="label">Email Address</span>
+        <span class="value" id="emailAddress">abdunnurwasit@gmail.com</span>
+      </div>
+      <div class="login-item">
+        <span class="label">Password</span>
+        <span class="value" id="password">************</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audience Info & Talent Section -->
+  <div class="two-column">
+    <!-- Audience Info Card -->
+    <div class="card audience-info">
+      <div class="card-header">
+        <h2>Audience Info</h2>
+        <button class="edit-btn">✎ Edit details</button>
+      </div>
+      <div class="card-content">
+        <div class="info-item">
+          <span class="label">Follower Count</span>
+          <span class="value" id="followerCount">30k</span>
+        </div>
+        <div class="info-item">
+          <span class="label">Avg. Age of audience</span>
+          <span class="value" id="avgAge">28</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Your Talent Card -->
+    <div class="card talent-card">
+      <div class="card-header">
+        <h2>Your Talent</h2>
+        <button class="edit-btn">✎ Edit talent</button>
+      </div>
+      <div class="card-content tags-container" id="talentTags">
+        <!-- Talent tags will be inserted here via JS -->
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="account_setting.js"></script>
+</body>
+</html>

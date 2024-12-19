@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .top-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+  }
+  
+  .card .amount {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #4b2267; /* purple tone */
+  }
+  
+  .analytics-btn, .withdraw-btn {
+    background: none;
+    border: none;
+    color: #4b2267;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    text-decoration: underline;
+  }
+  
+  .withdraw-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #fef1ff;
+    border: 1px solid #4b2267;
+    border-radius: 4px;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .withdraw-btn:hover {
+    background: #ede2f0;
+  }
+  
+  .history-section {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .history-header h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .filter-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .history-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .history-table thead {
+    background: #f7f7f7;
+  }
+  
+  .history-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px;
+    color: #555;
+  }
+  
+  .history-table td {
+    font-size: 14px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .history-table tr:hover {
+    background: #f5f5f5;
+  }
+  
+  .statistics-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .statistics-section h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .top-cards {
+      flex-direction: column;
+    }
+  
+    .withdraw-btn {
+      position: static;
+      margin-top: 10px;
+    }
+  }
+  

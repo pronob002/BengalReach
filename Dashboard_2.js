@@ -25,7 +25,7 @@ function showSection(sectionId) {
 
     // Map section IDs to their respective HTML files
     const sectionFiles = {
-        dashboard: 'Dashboard.html',
+        dashboard: 'dash.html',
         findInfluencers: 'FindInfluencers.html',
         list: 'List.html',
         orders: 'Orders.html',

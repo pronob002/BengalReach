@@ -1,0 +1,102 @@
+.overview-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.overview-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.info-box.double {
+    grid-column: span 2;
+}
+
+.H2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.total-balance {
+    font-size: 24px;
+    color: #7e57c2;
+    margin-bottom: 15px;
+}
+
+.unread-messages {
+    font-size: 16px;
+    color: #7e57c2;
+}
+
+.message-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.account-count {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.order-summary,
+.earnings-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.order-summary span,
+.earnings-details span {
+    font-size: 16px;
+    color: #333;
+}
+
+strong {
+    color: #7e57c2;
+}
+
+.action-button {
+    background-color: #7e57c2;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.action-button.small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.action-button:hover {
+    background-color: #5c3d99;
+}
+
+.orders-header,
+.earnings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Earnings Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="see_orders.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <h1 class="page-title">Earnings</h1>
+
+  <!-- Top Cards Section -->
+  <div class="top-cards">
+    <div class="card total-earnings">
+      <h3>Total Earning till date</h3>
+      <p class="amount">$388.00</p>
+      <button class="analytics-btn">See analytics</button>
+    </div>
+    <div class="card available-balance">
+      <h3>Available Balance</h3>
+      <p class="amount">$125.00</p>
+      <button class="withdraw-btn">Withdraw</button>
+    </div>
+  </div>
+
+  <!-- Earnings History Section -->
+  <div class="history-section">
+    <div class="history-header">
+      <h2>Earning History</h2>
+      <div class="filter-dropdown">
+        <button class="dropdown-btn">All Entries ▼</button>
+        <!-- Future: dropdown menu if needed -->
+      </div>
+    </div>
+    <table class="history-table">
+      <thead>
+        <tr>
+          <th>Date and time</th>
+          <th>Platform</th>
+          <th>Account</th>
+          <th>Order ID</th>
+          <th>Earnings</th>
+          <th>Client</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="history-body">
+        <!-- Rows will be populated by JavaScript (dummy data for now) -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Statistics Section -->
+  <div class="statistics-section">
+    <h2>Statistics</h2>
+    <div class="chart-container">
+      <canvas id="earningsChart"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="see_orders.js"></script>
+</body>
+</html>

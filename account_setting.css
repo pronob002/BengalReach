@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .breadcrumb span {
+    color: #333;
+  }
+  
+  .page-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+  
+  .edit-btn:hover {
+    background: #eee;
+  }
+  
+  .login-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .login-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    word-wrap: break-word;
+  }
+  
+  .two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .two-column .card {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .info-item {
+    margin-bottom: 20px;
+  }
+  
+  .tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    background: #f3f3f3;
+    border-radius: 20px;
+    padding: 6px 12px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .tag .remove-tag {
+    margin-left: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .login-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .two-column {
+      flex-direction: column;
+    }
+  }
+  

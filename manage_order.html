@@ -1,0 +1,115 @@
+<!-- manage_order -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Post for 24 hours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="manage_order.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <a href="#">Orders</a> / <span>Post for 24 hours</span>
+  </nav>
+
+  <!-- Header (Dynamic after Start Order) -->
+  <div class="order-header" id="orderHeader">
+    <div class="order-info">
+      <div class="profile-info">
+        <div class="platform-icon">
+          <div class="icon-placeholder">@</div>
+        </div>
+        <div class="details">
+          <h2 class="title">Post for 24 hours</h2>
+          <p class="subtext">Instagram @abdunnur 156</p>
+        </div>
+        <div class="client-info">
+          <span class="client-name">Symon Randalwolf</span>
+        </div>
+      </div>
+      <div class="order-meta">
+        <span class="order-id">Order id: Ax5546ghj</span>
+        <span class="order-price" id="orderPrice">$15</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat/Message Container -->
+  <div class="chat-container">
+
+    <!-- Client message (left-aligned) -->
+    <div class="message-card from-client">
+      <div class="message-wrapper">
+        <div class="avatar">👩</div>
+        <div class="message-content">
+          <span class="sender-name">@symon sent the requirements</span>
+          <h3>Description</h3>
+          <p>✨ Exciting News! ✨</p>
+          <p>Hey Influencers! 🚀 We’re thrilled to introduce our latest product – GlamLite Ring Light – designed just for you! 📸✨</p>
+          <p><strong>Why GlamLite Ring Light?</strong><br>
+          ✴ Unmatched Quality: Experience top-notch performance that elevates your content.<br>
+          ✴ Sleek Design: Perfect for your aesthetic, whether you’re in a studio or on the go.<br>
+          ✴ Special Discount: Use code INFLUENCE24 for an exclusive 24-hour discount! ⏱</p>
+          <p>Ready to take your content to the next level? Tap the link in our bio and get your hands on the GlamLite Ring Light now! ✨</p>
+          <p>📷 Don’t forget to tag us in your unboxing and review posts for a chance to be featured on our page! #InfluenceWithBrightVibes</p>
+
+          <h4>Attachments</h4>
+          <div class="attachments">
+            <div class="attachment-file">Attachment 01.jpg</div>
+            <div class="attachment-file">Attachment 01.jpg</div>
+            <div class="attachment-file">Attachment 01.pdf</div>
+            <div class="attachment-file">Attachment 01.svg</div>
+          </div>
+          <span class="timestamp">3:00 am. 4th may</span>
+          <button class="start-order-btn" id="startOrderBtn">Start Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Influencer message (right-aligned) -->
+    <div class="message-card from-influencer" id="influencerMsg1">
+      <div class="message-wrapper">
+        <div class="message-content">
+          <p>I’m thrilled to inform you that I have accepted your order for the [Product/Service Name]. Thank you for choosing us!</p>
+          <p>We’re excited to start working on this and ensure everything meets your expectations. If you have any specific requests or additional information you’d like to share, please feel free to let me know.</p>
+          <p>Thank you once again for your trust and business.</p>
+          <span class="timestamp">3:00 am. 4th may</span>
+        </div>
+        <div class="avatar">👨</div>
+      </div>
+    </div>
+
+    <!-- "You have started the order" message (initially hidden) -->
+    <div class="message-card from-influencer hidden" id="startedOrderMsg">
+      <div class="message-wrapper">
+        <div class="message-content">
+          <p>You have started the order</p>
+          <span class="timestamp">3:00 am. 4th may</span>
+        </div>
+        <div class="avatar">👨</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Message input area -->
+  <div class="message-input-area">
+    <input type="text" placeholder="Send a message..." class="message-input">
+    <div class="input-actions">
+      <button class="emoji-btn">😊</button>
+      <button class="attach-btn">📎</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="manage_order.js"></script>
+</body>
+</html>

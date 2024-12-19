@@ -1,0 +1,155 @@
+/* submit_order */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  #openModalBtn {
+    background: #4b2267;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 40px;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Modal Container */
+  .modal {
+    background: #fff;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Modal Header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Modal Content */
+  .section-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  .notes-textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    resize: vertical;
+    min-height: 80px;
+    font-size: 14px;
+  }
+  
+  .upload-area {
+    border: 2px dashed #9d71b7;
+    background: #f4e9fa;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .upload-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .upload-icon {
+    font-size: 24px;
+  }
+  
+  .attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .radio-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #f90;
+  }
+  
+  .remove-attachment {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  /* Modal Footer */
+  .modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(90deg, #f90, #9d71b7);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  

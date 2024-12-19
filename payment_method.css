@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumb a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .breadcrumb span {
+    color: #333;
+  }
+  
+  .page-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Common card styles */
+  .card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .payment-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .payment-card .card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .payment-logo {
+    max-height: 30px;
+  }
+  
+  .details {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .edit-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  
+  .edit-btn:hover {
+    background: #e0e0e0;
+  }
+  
+  .edit-icon {
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml;utf8,<svg width="24" height="24" fill="none" stroke="%23333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-edit" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 000 4v10a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L10 17H7v-3l11.5-11.5z"/></svg>') no-repeat center center;
+    background-size: 16px 16px;
+  }
+  
+  /* Add Payment Method card */
+  .add-card {
+    border: 2px dashed #9d71b7;
+    background: #f4e9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b2267;
+    text-decoration: none;
+  }
+  
+  .add-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .cards-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
