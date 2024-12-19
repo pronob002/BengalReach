@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Messages</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Message.css">
+</head>
+<body>
+
+<div class="container">
+
+  <aside class="sidebar">
+    <h1 class="page-title">Messages</h1>
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search messages" class="search-input">
+    </div>
+    <div class="chat-list">
+      <div class="chat-item active" data-user="Ralph Edwards">
+        <div class="chat-avatar">👦</div>
+        <div class="chat-info">
+          <div class="chat-name-status">
+            <span class="chat-name">Ralph Edwards</span>
+            <span class="status-dot active"></span>
+          </div>
+          <div class="chat-message">Hello? interested in this loa...</div>
+          <div class="chat-time">2 days ago</div>
+        </div>
+      </div>
+
+      <div class="chat-item" data-user="Jacob Jones">
+        <div class="chat-avatar">🧑</div>
+        <div class="chat-info">
+          <span class="chat-name">Jacob Jones</span>
+          <div class="chat-message">Are you There? I'm busy yes...</div>
+          <div class="chat-time">2 days ago</div>
+        </div>
+      </div>
+
+      <div class="chat-item" data-user="Wade Warren">
+        <div class="chat-avatar">👱</div>
+        <div class="chat-info">
+          <span class="chat-name">Wade Warren</span>
+          <div class="chat-message">Are you there? interested i...</div>
+          <div class="chat-time">2 days ago</div>
+        </div>
+      </div>
+
+      <div class="chat-item" data-user="Ronald Richards">
+        <div class="chat-avatar">👨</div>
+        <div class="chat-info">
+          <span class="chat-name">Ronald Richards</span>
+          <div class="chat-message">Then make a deal</div>
+          <div class="chat-time">2 days ago</div>
+        </div>
+      </div>
+
+      <div class="chat-item" data-user="Arlene McCoy">
+        <div class="chat-avatar">👩</div>
+        <div class="chat-info">
+          <span class="chat-name">Arlene McCoy</span>
+          <div class="chat-message">Hello? interested in this loa...</div>
+          <div class="chat-time">2 days ago</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="chat-header">
+      <div class="chat-user-info">
+        <h2 class="user-name" id="chatUserName">Ralph Edwards</h2>
+        <span class="user-status">
+          <span class="status-dot active"></span> Active now
+        </span>
+      </div>
+      <div class="chat-actions">
+        <button class="menu-btn" id="menuBtn">⋯</button>
+        <div class="menu-dropdown" id="menuDropdown">
+          <ul>
+            <li>Account Settings</li>
+            <li>Transactions</li>
+            <li>Payment methods</li>
+            <li>Help and support</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="messages-area" id="messagesArea">
+      <!-- Default conversation with Ralph Edwards (Receiver = Ralph, Sender = You) -->
+      <div class="message received">
+        <div class="message-wrapper">
+          <div class="avatar">👦</div>
+          <div class="message-content">
+            <div class="replied-box">
+              <span class="replied-label">Replied to</span>
+              <p class="replied-text">This design i produced 2 month ago.</p>
+            </div>
+            <p>Hi! I’ve completed the design for your landing page. Please check it out and let me know if any revisions are needed.</p>
+            <span class="msg-time">04:54 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message sent">
+        <div class="message-wrapper">
+          <div class="message-content">
+            <p>I am right now doing the revisions</p>
+            <span class="msg-time">04:54 PM</span>
+          </div>
+          <div class="avatar">🧑</div>
+        </div>
+      </div>
+
+      <div class="message received attachment-msg">
+        <div class="message-wrapper">
+          <div class="avatar">👦</div>
+          <div class="message-content">
+            <p>Here’s the banner design for the campaign:</p>
+            <h4>ATTACHMENTS</h4>
+            <div class="attachment-gallery">
+              <div class="attachment-item">
+                <div class="attachment-preview">🖼️</div>
+                <div class="attachment-info">
+                  <span>Design Banner 1.png</span>
+                  <button class="download-btn">⬇</button>
+                </div>
+              </div>
+              <div class="attachment-item">
+                <div class="attachment-preview">🖼️</div>
+                <div class="attachment-info">
+                  <span>Design Banner 1.png</span>
+                  <button class="download-btn">⬇</button>
+                </div>
+              </div>
+              <div class="attachment-item more-item">
+                +4
+              </div>
+            </div>
+            <span class="msg-time">04:54 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-input-area">
+      <input type="text" placeholder="Send a message..." class="message-input">
+      <div class="input-actions">
+        <button class="emoji-btn">😊</button>
+        <button class="attach-btn">📎</button>
+      </div>
+    </div>
+  </main>
+
+  <aside class="right-sidebar">
+    <h3>Orders with <span id="rightSidebarName">Ralph Edwards</span></h3>
+    <div class="order-card">
+      <div class="order-icon">
+        <span class="order-icon-text">➕</span>
+        <span class="order-price">$1000</span>
+      </div>
+      <p class="order-account">Instagram @abdunnur 156</p>
+      <button class="see-order-btn">See order</button>
+    </div>
+
+    <div class="order-card">
+      <div class="order-icon">
+        <span class="order-icon-text">💬</span>
+        <span class="order-price">$15</span>
+      </div>
+      <p class="order-account">Instagram @abdunnur 156</p>
+      <button class="see-order-btn">See order</button>
+    </div>
+  </aside>
+
+</div>
+
+<script src="Message.js"></script>
+</body>
+</html>
