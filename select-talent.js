@@ -1,3 +1,5 @@
+// select-talent
+
 function filterResults() {
     const query = document.getElementById("talent-search").value.toLowerCase();
     const resultTags = document.querySelectorAll(".result-tag");

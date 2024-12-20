@@ -1,4 +1,4 @@
-// Sidebar toggle functionality
+// Dashboard_2
 const sidebar = document.getElementById('sidebar');
 const toggleBtn = document.getElementById('toggleBtn');
 

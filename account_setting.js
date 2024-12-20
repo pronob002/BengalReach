@@ -1,4 +1,4 @@
-// Dummy Data (will be fetched from database later)
+// account_setting
 const talents = [
     "Artist",
     "Makeup Artist",

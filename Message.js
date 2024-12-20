@@ -1,3 +1,5 @@
+// Message
+
 const menuBtn = document.getElementById('menuBtn');
 const menuDropdown = document.getElementById('menuDropdown');
 const chatItems = document.querySelectorAll('.chat-item');

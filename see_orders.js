@@ -1,4 +1,4 @@
-// Dummy Data
+// see_orders
 const earningHistory = [
     {
       datetime: "12th may, 2024 ; 02:34 am",

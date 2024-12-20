@@ -1,4 +1,4 @@
-// Dummy transaction data (to be fetched dynamically later)
+// Transaction
 const transactions = [
     {
       datetime: "Feb 21, 2023 at 03:05 pm",

@@ -1,3 +1,5 @@
+// SignUp
+
 function toggleInput() {
     const emailInput = document.getElementById("email").parentElement;
     const phoneInput = document.getElementById("phone-group");

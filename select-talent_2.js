@@ -1,3 +1,5 @@
+// select-talent_2
+
 const allTalents = [
     "Artist", "Makeup Artist", "Canvas Art", "Game Art", "Illustration",
     "Digital Art", "Art Therapy", "Photography", "Travel Blogging",
