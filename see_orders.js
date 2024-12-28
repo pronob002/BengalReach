@@ -1,6 +1,5 @@
-// see_orders
-const earningHistory = [
-    {
+const earningsHistoryData = [
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -8,8 +7,8 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    },
-    {
+  },
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -17,8 +16,8 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    },
-    {
+  },
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -26,8 +25,8 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    },
-    {
+  },
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -35,8 +34,8 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    },
-    {
+  },
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -44,8 +43,8 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    },
-    {
+  },
+  {
       datetime: "12th may, 2024 ; 02:34 am",
       platform: "Instagram",
       account: "@abdunnur156",
@@ -53,106 +52,104 @@ const earningHistory = [
       earnings: "$10000000",
       client: "Symon Tarly",
       actions: "👁️"
-    }
-  ];
-  
-  // Populate the table with dummy data
-  const historyBody = document.getElementById('history-body');
-  earningHistory.forEach(entry => {
-    const row = document.createElement('tr');
-  
-    const datetime = document.createElement('td');
-    datetime.textContent = entry.datetime;
-    row.appendChild(datetime);
-  
-    const platform = document.createElement('td');
-    platform.textContent = entry.platform;
-    row.appendChild(platform);
-  
-    const account = document.createElement('td');
-    account.textContent = entry.account;
-    row.appendChild(account);
-  
-    const orderId = document.createElement('td');
-    orderId.textContent = entry.orderId;
-    row.appendChild(orderId);
-  
-    const earnings = document.createElement('td');
-    earnings.textContent = entry.earnings;
-    row.appendChild(earnings);
-  
-    const client = document.createElement('td');
-    client.textContent = entry.client;
-    row.appendChild(client);
-  
-    const actions = document.createElement('td');
-    actions.textContent = entry.actions;
-    row.appendChild(actions);
-  
-    historyBody.appendChild(row);
-  });
-  
-  // Chart.js Setup
-  const ctx = document.getElementById('earningsChart').getContext('2d');
-  
-  // Dummy monthly earnings data
-  // Months: Aug, Sep, Oct, Nov, Dec, Jan'24, Feb, Mar, Apr, May, Jun, Jul
-  const monthlyData = {
-    labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan'24", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    data: [50, 100, 120, 150, 300, 400, 350, 200, 50, 400, 556, 300]
-  };
-  
-  new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: monthlyData.labels,
+  }
+];
+
+// Populate the table with dummy data
+const earningsHistoryTableBody = document.getElementById('earnings-history-body');
+earningsHistoryData.forEach(entry => {
+  const row = document.createElement('tr');
+
+  const datetimeCell = document.createElement('td');
+  datetimeCell.textContent = entry.datetime;
+  row.appendChild(datetimeCell);
+
+  const platformCell = document.createElement('td');
+  platformCell.textContent = entry.platform;
+  row.appendChild(platformCell);
+
+  const accountCell = document.createElement('td');
+  accountCell.textContent = entry.account;
+  row.appendChild(accountCell);
+
+  const orderIdCell = document.createElement('td');
+  orderIdCell.textContent = entry.orderId;
+  row.appendChild(orderIdCell);
+
+  const earningsCell = document.createElement('td');
+  earningsCell.textContent = entry.earnings;
+  row.appendChild(earningsCell);
+
+  const clientCell = document.createElement('td');
+  clientCell.textContent = entry.client;
+  row.appendChild(clientCell);
+
+  const actionsCell = document.createElement('td');
+  actionsCell.textContent = entry.actions;
+  row.appendChild(actionsCell);
+
+  earningsHistoryTableBody.appendChild(row);
+});
+
+// Chart.js Setup
+const earningsChartCtx = document.getElementById('earningsChartCanvas').getContext('2d');
+
+// Dummy monthly earnings data
+const monthlyEarningsData = {
+  labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan'24", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+  data: [50, 100, 120, 150, 300, 400, 350, 200, 50, 400, 556, 300]
+};
+
+new Chart(earningsChartCtx, {
+  type: 'line',
+  data: {
+      labels: monthlyEarningsData.labels,
       datasets: [{
-        label: 'Earnings',
-        data: monthlyData.data,
-        fill: true,
-        borderColor: '#4b2267',
-        backgroundColor: 'rgba(75,34,103,0.1)',
-        pointBackgroundColor: '#4b2267',
-        pointBorderColor: '#4b2267',
-        pointRadius: 4,
-        tension: 0.3
+          label: 'Earnings',
+          data: monthlyEarningsData.data,
+          fill: true,
+          borderColor: '#4b2267',
+          backgroundColor: 'rgba(75,34,103,0.1)',
+          pointBackgroundColor: '#4b2267',
+          pointBorderColor: '#4b2267',
+          pointRadius: 4,
+          tension: 0.3
       }]
-    },
-    options: {
+  },
+  options: {
       responsive: true,
       plugins: {
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return '$' + context.parsed.y;
-            }
+          tooltip: {
+              callbacks: {
+                  label: function(context) {
+                      return '$' + context.parsed.y;
+                  }
+              }
           }
-        }
       },
       scales: {
-        x: {
-          grid: {
-            display: true,
-            color: "#eee"
-          }
-        },
-        y: {
-          beginAtZero: true,
-          grid: {
-            display: true,
-            color: "#eee"
+          x: {
+              grid: {
+                  display: true,
+                  color: "#eee"
+              }
           },
-          ticks: {
-            callback: function(value) {
-              return '$' + value;
-            }
+          y: {
+              beginAtZero: true,
+              grid: {
+                  display: true,
+                  color: "#eee"
+              },
+              ticks: {
+                  callback: function(value) {
+                      return '$' + value;
+                  }
+              }
           }
-        }
       },
       hover: {
-        mode: 'index',
-        intersect: false
+          mode: 'index',
+          intersect: false
       }
-    }
-  });
-  
+  }
+});

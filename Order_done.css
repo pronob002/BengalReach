@@ -1,0 +1,543 @@
+/* This should be saved as order_done_styles.css and linked in order_done.html */
+.body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+  }
+  
+  .order-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  
+  .order-breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: -40px;
+  }
+  
+  .order-breadcrumb a {
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .order-breadcrumb span {
+    color: #333;
+  }
+  
+  .order-header {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 12px;
+  }
+  
+  .order-info {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  
+  .order-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .order-platform-icon .order-icon-placeholder {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .order-details .order-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .order-details .order-subtext {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .order-client-info {
+    font-weight: 500;
+  }
+  
+  .order-meta {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .order-id {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .order-price {
+    font-weight: 600;
+    font-size: 16px;
+    color: #4b2267;
+  }
+  
+  .order-chat-container {
+    background: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .order-message-card {
+    margin-bottom: 20px;
+    display: flex;
+    width: 100%;
+  }
+  
+  .order-message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    max-width: 80%;
+  }
+  
+  .order-avatar {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .order-message-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .order-attachments {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .order-attachment-file {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .order-sender-name {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .order-timestamp {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .order-start-order-btn {
+    background: #4b2267;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .order-start-order-btn:hover {
+    background: #3a1a52;
+  }
+  
+  .order-hidden {
+    display: none;
+  }
+  
+  .order-from-client {
+    justify-content: flex-start;
+  }
+  
+  .order-from-client .order-message-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .order-from-client .order-avatar {
+    order: 1; /* Avatar on the left */
+  }
+  
+  .order-from-client .order-message-content {
+    margin-left: 10px;
+  }
+  
+  .order-from-influencer {
+    justify-content: flex-end;
+  }
+  
+  .order-from-influencer .order-message-wrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  
+  .order-from-influencer .order-avatar {
+    order: 3; /* Avatar on the right */
+  }
+  
+  .order-from-influencer .order-message-content {
+    margin-right: 10px;
+  }
+  
+  .order-message-input-area {
+    background: #ddd;
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .order-message-input {
+    flex: 1;
+    border: none;
+    background: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .order-message-input:focus {
+    outline: none;
+  }
+  
+  .order-input-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
+  .order-emoji-btn, .order-attach-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .order-emoji-btn:hover, .order-attach-btn:hover {
+    opacity: 0.7;
+  }
+  
+  .order-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 999; /* Ensure modal is above everything */
+  }
+  
+  .order-modal {
+    background: #fff;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .order-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .order-section-label {
+    display:block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  
+  .order-notes-textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    resize: vertical;
+    min-height: 80px;
+    font-size: 14px;
+  }
+  
+  .order-upload-area {
+    border: 2px dashed #9d71b7;
+    background: #f4e9fa;
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .order-upload-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .order-upload-icon {
+    font-size: 24px;
+  }
+  
+  .order-attachments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .order-attachment-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .order-radio-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #f90;
+  }
+  
+  .order-remove-attachment {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .order-modal-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .order-submit-btn {
+    background: linear-gradient(90deg, #f90, #9d71b7);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .order-meta.submitted .order-price {
+    display: none;
+  }
+  
+  .order-meta.submitted .submitted-msg {
+    border: 2px solid #9d71b7;
+    background: linear-gradient(90deg, #fff, #f0e5f0);
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #4b2267;
+    font-weight: 600;
+  }
+  .order-chat-container {
+    background: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: calc(100vh - 250px); /* Adjust the height as per the layout of your page */
+    overflow-y: auto;
+}
+
+/* Hiding the scrollbar for Webkit browsers */
+.order-chat-container::-webkit-scrollbar {
+    display: none; /* WebKit */
+}
+
+/* Hiding the scrollbar for IE, Edge, and Firefox */
+.order-chat-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.order-chat-container {
+    background: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+}
+
+.order-chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.order-chat-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.complete-btn {
+    position: absolute;
+    right: 20px; /* Distance from the right edge of the header */
+    top: 20px; /* Distance from the top of the header */
+    padding: 10px 15px;
+    background-color: #4b2267; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.complete-btn:hover {
+    background-color: #372048; /* Darken button on hover */
+}
+
+.disabled-btn {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+.order-message-input-area {
+    position: fixed;  /* Make the input area fixed at the bottom */
+    bottom: 0;        /* Position it at the bottom of the viewport */
+    left: 0;          /* Align to the left edge of the viewport */
+    right: 0;         /* Stretch to the right edge of the viewport */
+    background: #ddd; /* Background color */
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better separation */
+    z-index: 1000; 
+    width: 950px;
+    margin-left: 290px;   /* Make sure it's above other content */
+}
+
+.order-container {
+    padding-bottom: 80px; /* Add padding to the bottom of the container to ensure there's space for the input area */
+}
+
+.order-chat-container {
+    max-height: calc(100vh - 280px); /* Adjust height to account for fixed input area */
+    overflow-y: auto;
+}
+
+/* Update to scrollbar settings to ensure they only apply to the chat container */
+.order-chat-container::-webkit-scrollbar {
+    display: none;
+}
+
+.order-chat-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+
+/* Responsive adjustments and z-index management */
+.order-message-input-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ddd;
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 150; /* Higher than chat container but lower than modals */
+}
+
+/* Ensure modals and other overlays have higher z-index */
+.order-modal-overlay {
+    z-index: 1000; /* Very high to cover everything when active */
+}
+
+/* Make sure chat container does not overlap input */
+.order-chat-container {
+    padding-bottom: 70px; /* Adjust padding to give space for the input area */
+    overflow-y: auto;
+    max-height: calc(100vh - 160px); /* Adjust height considering header and input area */
+}
+
+/* Responsive settings for smaller screens */
+@media (max-width: 800px) {
+    .order-message-input-area {
+        width: 100%;
+        padding: 8px 15px;
+    }
+    .order-chat-container {
+        max-height: calc(100vh - 140px); /* More height adjustment for smaller screens */
+    }
+}
+
+/* Higher specificity for submitted message area to ensure it doesn't block input area */
+#submittedOrderMsg {
+    z-index: 50; /* Lower than the input area */
+}
+
+
+
+/* CSS for when the sidebar is collapsed */
+.collapsed-sidebar .order-message-input-area {
+    margin-left: 100px; /* Adjust based on your collapsed sidebar width */
+    width: calc(100% - 100px); /* Adjust the width to take the full available space */
+}

@@ -1,5 +1,3 @@
-<!-- see_orders -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,37 +8,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="see_orders.css">
 </head>
-<body>
+<body id="EarningsPage">
 
-<div class="container">
+<div class="earnings-container">
 
   <!-- Header -->
-  <h1 class="page-title">Earnings</h1>
+  <h1 class="earnings-page-title">Earnings</h1>
 
   <!-- Top Cards Section -->
-  <div class="top-cards">
-    <div class="card total-earnings">
+  <div class="earnings-top-cards">
+    <div class="earnings-card total-earnings-card">
       <h3>Total Earning till date</h3>
-      <p class="amount">$388.00</p>
-      <button class="analytics-btn">See analytics</button>
+      <p class="earnings-amount">$388.00</p>
+      <button class="earnings-analytics-btn">See analytics</button>
     </div>
-    <div class="card available-balance">
+    <div class="earnings-card available-balance-card">
       <h3>Available Balance</h3>
-      <p class="amount">$125.00</p>
-      <button class="withdraw-btn">Withdraw</button>
+      <p class="earnings-amount">$125.00</p>
+      <button class="earnings-withdraw-btn">Withdraw</button>
     </div>
   </div>
 
   <!-- Earnings History Section -->
-  <div class="history-section">
-    <div class="history-header">
+  <div class="earnings-history-section">
+    <div class="earnings-history-header">
       <h2>Earning History</h2>
-      <div class="filter-dropdown">
-        <button class="dropdown-btn">All Entries ▼</button>
+      <div class="earnings-filter-dropdown">
+        <button class="earnings-dropdown-btn">All Entries ▼</button>
         <!-- Future: dropdown menu if needed -->
       </div>
     </div>
-    <table class="history-table">
+    <table class="earnings-history-table">
       <thead>
         <tr>
           <th>Date and time</th>
@@ -52,17 +50,17 @@
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody id="history-body">
+      <tbody id="earnings-history-body">
         <!-- Rows will be populated by JavaScript (dummy data for now) -->
       </tbody>
     </table>
   </div>
 
   <!-- Statistics Section -->
-  <div class="statistics-section">
+  <div class="earnings-statistics-section">
     <h2>Statistics</h2>
-    <div class="chart-container">
-      <canvas id="earningsChart"></canvas>
+    <div class="earnings-chart-container">
+      <canvas id="earningsChartCanvas"></canvas>
     </div>
   </div>
 

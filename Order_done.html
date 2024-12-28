@@ -1,451 +1,32 @@
-<!-- Order_done -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Post for 24 hours</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-/* Combined CSS for manage_order and submit_order */
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f7f7f7;
-  color: #333;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.breadcrumb {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.breadcrumb a {
-  color: #666;
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: #333;
-}
-
-.order-header {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  display: flex;
-  margin-bottom: 20px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.order-info {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.platform-icon .icon-placeholder {
-  width: 40px;
-  height: 40px;
-  background: #f0f0f0;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.details .title {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.details .subtext {
-  margin: 0;
-  font-size: 14px;
-  color: #666;
-}
-
-.client-info {
-  font-weight: 500;
-}
-
-.order-meta {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.order-id {
-  font-size: 14px;
-  color: #666;
-}
-
-.order-price {
-  font-weight: 600;
-  font-size: 16px;
-  color: #4b2267;
-}
-
-/* After Start Order clicked, we add a button next to price */
-.order-meta .complete-btn {
-  background: linear-gradient(90deg, #f90, #9d71b7);
-  border: none;
-  border-radius: 4px;
-  color: #fff;
-  padding: 6px 12px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.chat-container {
-  background: #eee;
-  border-radius: 6px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.message-card {
-  margin-bottom: 20px;
-  display: flex;
-  width: 100%;
-}
-
-.message-wrapper {
-  display: flex;
-  align-items: flex-start;
-  max-width: 80%;
-}
-
-/* Avatar styling */
-.avatar {
-  font-size: 24px;
-  margin: 0 10px;
-}
-
-/* Message content styling (common) */
-.message-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  position: relative;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.attachments {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.attachment-file {
-  background: #f0f0f0;
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-size: 14px;
-  color: #333;
-}
-
-.sender-name {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.timestamp {
-  font-size: 12px;
-  color: #666;
-  display: block;
-  margin-top: 10px;
-}
-
-.start-order-btn {
-  background: #4b2267;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.start-order-btn:hover {
-  background: #3a1a52;
-}
-
-.hidden {
-  display: none;
-}
-
-/* LEFT (from-client) */
-.from-client {
-  justify-content: flex-start;
-}
-
-.from-client .message-wrapper {
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: left;
-}
-
-.from-client .avatar {
-  order: 1; /* Avatar on the left */
-}
-
-.from-client .message-content {
-  margin-left: 10px;
-}
-
-/* RIGHT (from-influencer) */
-.from-influencer {
-  justify-content: flex-end;
-}
-
-.from-influencer .message-wrapper {
-  flex-direction: row;
-  justify-content: flex-end;
-  text-align: right;
-}
-
-.from-influencer .avatar {
-  order: 3; /* Avatar on the right */
-}
-
-.from-influencer .message-content {
-  margin-right: 10px;
-}
-
-/* Message input area */
-.message-input-area {
-  background: #ddd;
-  border-radius: 6px;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-}
-
-.message-input {
-  flex: 1;
-  border: none;
-  background: #fff;
-  border-radius: 6px;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.message-input:focus {
-  outline: none;
-}
-
-.input-actions {
-  display: flex;
-  gap: 10px;
-  margin-left: 10px;
-}
-
-.emoji-btn, .attach-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.emoji-btn:hover, .attach-btn:hover {
-  opacity: 0.7;
-}
-
-/* Modal Overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  display: none; /* hidden by default */
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  z-index: 999; /* Ensure modal is above everything */
-}
-
-/* Modal Container */
-.modal {
-  background: #fff;
-  border-radius: 8px;
-  width: 400px;
-  max-width: 100%;
-  padding: 20px;
-  position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
-}
-
-/* Modal Header */
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.modal-header h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Modal Content */
-.section-label {
-  display: block;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px 0 5px;
-  color: #333;
-}
-
-.notes-textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 10px;
-  resize: vertical;
-  min-height: 80px;
-  font-size: 14px;
-}
-
-.upload-area {
-  border: 2px dashed #9d71b7;
-  background: #f4e9fa;
-  border-radius: 6px;
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.upload-instructions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-}
-
-.upload-icon {
-  font-size: 24px;
-}
-
-.attachments-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.attachment-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.radio-circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #f90;
-}
-
-.remove-attachment {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  line-height: 1;
-}
-
-/* Modal Footer */
-.modal-footer {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.submit-btn {
-  background: linear-gradient(90deg, #f90, #9d71b7);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 16px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* Submitted state styling */
-.order-meta.submitted .order-price {
-  display: none;
-}
-
-.order-meta.submitted .submitted-msg {
-  border: 2px solid #9d71b7;
-  background: linear-gradient(90deg, #fff, #f0e5f0);
-  padding: 6px 12px;
-  border-radius: 4px;
-  color: #4b2267;
-  font-weight: 600;
-}
-</style>
+<link rel="stylesheet" href="order_done.css">
 </head>
 <body>
 
-<div class="container">
+<div class="order-container">
 
   <!-- Breadcrumb -->
-  <nav class="breadcrumb">
+  <nav class="order-breadcrumb">
     <a href="#">Orders</a> / <span>Post for 24 hours</span>
   </nav>
 
   <!-- Header -->
   <div class="order-header" id="orderHeader">
     <div class="order-info">
-      <div class="profile-info">
-        <div class="platform-icon">
-          <div class="icon-placeholder">@</div>
+      <div class="order-profile-info">
+        <div class="order-platform-icon">
+          <div class="order-icon-placeholder">@</div>
         </div>
-        <div class="details">
-          <h2 class="title">Post for 24 hours</h2>
-          <p class="subtext">Instagram @abdunnur 156</p>
+        <div class="order-details">
+          <h2 class="order-title">Post for 24 hours</h2>
+          <p class="order-subtext">Instagram @abdunnur 156</p>
         </div>
-        <div class="client-info">
+        <div class="order-client-info">
           <span class="client-name">Symon Randalwolf</span>
         </div>
       </div>
@@ -457,14 +38,14 @@ body {
   </div>
 
   <!-- Chat/Message Container -->
-  <div class="chat-container">
+  <div class="order-chat-container">
 
     <!-- Client message (left-aligned) -->
-    <div class="message-card from-client">
-      <div class="message-wrapper">
-        <div class="avatar">👩</div>
-        <div class="message-content">
-          <span class="sender-name">@symon sent the requirements</span>
+    <div class="order-message-card order-from-client">
+      <div class="order-message-wrapper">
+        <div class="order-avatar">👩</div>
+        <div class="order-message-content">
+          <span class="order-sender-name">@symon sent the requirements</span>
           <h3>Description</h3>
           <p>✨ Exciting News! ✨</p>
           <p>Hey Influencers! 🚀 We’re thrilled to introduce our latest product – GlamLite Ring Light – designed just for you! 📸✨</p>
@@ -476,187 +57,118 @@ body {
           <p>📷 Don’t forget to tag us in your unboxing and review posts for a chance to be featured on our page! #InfluenceWithBrightVibes</p>
 
           <h4>Attachments</h4>
-          <div class="attachments">
-            <div class="attachment-file">Attachment 01.jpg</div>
-            <div class="attachment-file">Attachment 01.jpg</div>
-            <div class="attachment-file">Attachment 01.pdf</div>
-            <div class="attachment-file">Attachment 01.svg</div>
+          <div class="order-attachments">
+            <div class="order-attachment-file">Attachment 01.jpg</div>
+            <div class="order-attachment-file">Attachment 02.jpg</div>
+            <div class="order-attachment-file">Attachment 03.pdf</div>
+            <div class="order-attachment-file">Attachment 04.svg</div>
           </div>
-          <span class="timestamp">3:00 am. 4th may</span>
-          <button class="start-order-btn" id="startOrderBtn">Start Order</button>
+          <span class="order-timestamp">3:00 am. 4th May</span>
+          <button class="order-start-order-btn" id="startOrderBtn">Start Order</button>
         </div>
       </div>
     </div>
 
     <!-- Influencer message (right-aligned) -->
-    <div class="message-card from-influencer" id="influencerMsg1">
-      <div class="message-wrapper">
-        <div class="message-content">
+    <div class="order-message-card order-from-influencer" id="influencerMsg1">
+      <div class="order-message-wrapper">
+        <div class="order-message-content">
           <p>I’m thrilled to inform you that I have accepted your order for the [Product/Service Name]. Thank you for choosing us!</p>
           <p>We’re excited to start working on this and ensure everything meets your expectations. If you have any specific requests or additional information you’d like to share, please feel free to let me know.</p>
           <p>Thank you once again for your trust and business.</p>
-          <span class="timestamp">3:00 am. 4th may</span>
+          <span class="order-timestamp">3:00 am. 4th May</span>
         </div>
-        <div class="avatar">👨</div>
+        <div class="order-avatar">👨</div>
       </div>
     </div>
 
     <!-- "You have started the order" message (initially hidden) -->
-    <div class="message-card from-influencer hidden" id="startedOrderMsg">
-      <div class="message-wrapper">
-        <div class="message-content">
+    <div class="order-message-card order-from-influencer order-hidden" id="startedOrderMsg">
+      <div class="order-message-wrapper">
+        <div class="order-message-content">
           <p>You have started the order</p>
-          <span class="timestamp">3:00 am. 4th may</span>
+          <span class="order-timestamp">3:00 am. 4th May</span>
         </div>
-        <div class="avatar">👨</div>
+        <div class="order-avatar">👨</div>
       </div>
     </div>
 
     <!-- "You submitted the order and completed!" message (initially hidden) -->
-    <div class="message-card from-influencer hidden" id="submittedOrderMsg">
-      <div class="message-wrapper">
-        <div class="message-content">
+    <div class="order-message-card order-from-influencer order-hidden" id="submittedOrderMsg">
+      <div class="order-message-wrapper">
+        <div class="order-message-content">
           <p>You submitted the order and completed!</p>
           <p>I’m thrilled to inform you that I have accepted your order for the [Product/Service Name]. Thank you for choosing us!</p>
           <p>We’re excited to start working on this and ensure everything meets your expectations. If you have any specific requests or additional information you’d like to share, please feel free to let me know.</p>
           <p>Thank you once again for your trust and business.</p>
-
           <h4>Attachments</h4>
-          <div class="attachments">
-            <div class="attachment-file">Attachment 01.jpg</div>
-            <div class="attachment-file">Attachment 01.jpg</div>
-            <div class="attachment-file">Attachment 01.pdf</div>
-            <div class="attachment-file">Attachment 01.svg</div>
+          <div class="order-attachments">
+            <div class="order-attachment-file">Attachment 01.jpg</div>
+            <div class="order-attachment-file">Attachment 02.jpg</div>
+            <div class="order-attachment-file">Attachment 03.pdf</div>
+            <div class="order-attachment-file">Attachment 04.svg</div>
           </div>
-
-          <span class="timestamp">3:00 am. 4th may</span>
+          <span class="order-timestamp">3:00 am. 4th May</span>
         </div>
-        <div class="avatar">👨</div>
+        <div class="order-avatar">👨</div>
       </div>
     </div>
 
   </div>
 
   <!-- Message input area -->
-  <div class="message-input-area">
-    <input type="text" placeholder="Send a message..." class="message-input">
-    <div class="input-actions">
-      <button class="emoji-btn">😊</button>
-      <button class="attach-btn">📎</button>
+  <div class="order-message-input-area">
+    <input type="text" placeholder="Send a message..." class="order-message-input">
+    <div class="order-input-actions">
+      <button class="order-emoji-btn">😊</button>
+      <button class="order-attach-btn">📎</button>
     </div>
   </div>
-
+ 
 </div>
-
+<!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
 <!-- Modal for Submit Order -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" id="modal">
-    <div class="modal-header">
+<div class="order-modal-overlay" id="modalOverlay">
+  <div class="order-modal" id="modal">
+    <div class="order-modal-header">
       <h2>Complete & Submit Order</h2>
-      <button class="close-btn" id="closeModalBtn">✕</button>
+      <button class="order-close-btn" id="closeModalBtn">✕</button>
     </div>
-    <div class="modal-content">
-      <label for="orderNotes" class="section-label">Short notes about the order</label>
-      <textarea id="orderNotes" class="notes-textarea" placeholder="Send notes..."></textarea>
+    <div class="order-modal-content">
+      <label for="orderNotes" class="order-section-label">Short notes about the order</label>
+      <textarea id="orderNotes" class="order-notes-textarea" placeholder="Send notes..."></textarea>
 
-      <label class="section-label">Upload documents</label>
-      <div class="upload-area" id="uploadArea">
-        <div class="upload-instructions">
-          <div class="upload-icon">⇪</div>
+      <label class="order-section-label">Upload documents</label>
+      <div class="order-upload-area" id="uploadArea">
+        <div class="order-upload-instructions">
+          <div class="order-upload-icon">⇪</div>
           <p>Upload necessary document</p>
         </div>
       </div>
 
-      <div class="attachments-list" id="attachmentsList">
+      <div class="order-attachments-list" id="attachmentsList">
         <!-- Dummy attachments -->
-        <div class="attachment-item">
-          <div class="radio-circle"></div>
-          <span class="attachment-name">Attachment 1</span>
-          <button class="remove-attachment">✕</button>
+        <div class="order-attachment-item">
+          <div class="order-radio-circle"></div>
+          <span class="order-attachment-name">Attachment 1</span>
+          <button class="order-remove-attachment">✕</button>
         </div>
-        <div class="attachment-item">
-          <div class="radio-circle"></div>
-          <span class="attachment-name">Attachment 1</span>
-          <button class="remove-attachment">✕</button>
+        <div class="order-attachment-item">
+          <div class="order-radio-circle"></div>
+          <span class="order-attachment-name">Attachment 2</span>
+          <button class="order-remove-attachment">✕</button>
         </div>
       </div>
     </div>
-    <div class="modal-footer">
-      <button class="submit-btn" id="submitBtn">Fill up the info and ready!</button>
+    <div class="order-modal-footer">
+      <button class="order-submit-btn" id="submitBtn">Fill up the info and ready!</button>
     </div>
   </div>
+
 </div>
 
-<script>
-// manage_order.js integrated code
 
-const startOrderBtn = document.getElementById('startOrderBtn');
-const startedOrderMsg = document.getElementById('startedOrderMsg');
-const orderPrice = document.getElementById('orderPrice');
+<script src="order_done.js"></script>
 
-let completeBtn = null;
-
-startOrderBtn.addEventListener('click', () => {
-  // Show the "You have started the order" message
-  startedOrderMsg.classList.remove('hidden');
-
-  // Remove the start order button
-  startOrderBtn.style.display = 'none';
-
-  // Add "Complete & Submit Order" button next to the price
-  completeBtn = document.createElement('button');
-  completeBtn.textContent = 'Complete & Submit Order';
-  completeBtn.classList.add('complete-btn');
-
-  const orderMeta = orderPrice.parentElement;
-  orderMeta.appendChild(completeBtn);
-
-  // On click of completeBtn, open the modal
-  completeBtn.addEventListener('click', () => {
-    modalOverlay.style.display = 'flex';
-  });
-});
-
-// submit_order.js integrated code
-
-const modalOverlay = document.getElementById('modalOverlay');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const attachmentsList = document.getElementById('attachmentsList');
-const uploadArea = document.getElementById('uploadArea');
-const submitBtn = document.getElementById('submitBtn');
-const submittedOrderMsg = document.getElementById('submittedOrderMsg');
-const orderMeta = document.querySelector('.order-meta');
-
-// Close modal
-closeModalBtn.addEventListener('click', () => {
-  modalOverlay.style.display = 'none';
-});
-
-// Remove attachment
-attachmentsList.addEventListener('click', (e) => {
-  if (e.target.classList.contains('remove-attachment')) {
-    const attachmentItem = e.target.closest('.attachment-item');
-    attachmentItem.remove();
-  }
-});
-
-// Upload area click (for demonstration)
-uploadArea.addEventListener('click', () => {
-  alert('Open file picker or handle drag & drop here.');
-});
-
-// Submit button action
-submitBtn.addEventListener('click', () => {
-  // Close modal
-  modalOverlay.style.display = 'none';
-
-  // Show a new message that order is submitted
-  submittedOrderMsg.classList.remove('hidden');
-
-  // Change the header to show a new message "You have submitted the order. Check pending orders"
-  orderMeta.classList.add('submitted');
-  orderMeta.innerHTML = `<span class="submitted-msg">You have submitted the order. Check pending orders</span>`;
-});
-</script>
 </body>
 </html>

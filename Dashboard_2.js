@@ -1,4 +1,5 @@
-// Dashboard_2
+// Dashboard_2.js
+
 const sidebar = document.getElementById('sidebar');
 const toggleBtn = document.getElementById('toggleBtn');
 
@@ -6,7 +7,6 @@ toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
 });
 
-// Show individual content sections dynamically
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
@@ -16,36 +16,36 @@ function showSection(sectionId) {
     const selectedSection = document.getElementById(sectionId);
     selectedSection.style.display = 'block';
 
-    // Update active state in sidebar
     const items = document.querySelectorAll('.sidebar li');
     items.forEach(item => {
         item.classList.remove('active');
     });
     event.currentTarget.classList.add('active');
 
-    // Map section IDs to their respective HTML files
+    loadSectionContent(sectionId);
+}
+
+function loadSectionContent(sectionId) {
     const sectionFiles = {
         dashboard: 'dash.html',
         findInfluencers: 'FindInfluencers.html',
         list: 'List.html',
         orders: 'Orders.html',
-        campaigns: 'Campaigns.html'
+        campaigns: 'Campaigns.html',
+        manage_order: 'order_done.html',
+        Earning: 'see_orders.html'
     };
 
-    // Fetch and load content dynamically
     if (sectionFiles[sectionId]) {
         fetch(sectionFiles[sectionId])
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Failed to load ${sectionFiles[sectionId]}`);
-                }
-                return response.text();
-            })
+            .then(response => response.text())
             .then(htmlContent => {
-                selectedSection.innerHTML = htmlContent;
+                document.getElementById(sectionId).innerHTML = htmlContent;
+                if (sectionId === 'manage_order') {
+                    // Reinitialize Order Done scripts
+                    OrderDoneInit();
+                }
             })
-            .catch(error => {
-                selectedSection.innerHTML = `<p>Error loading content: ${error.message}</p>`;
-            });
+            .catch(error => console.error('Failed to load section content:', error));
     }
 }
